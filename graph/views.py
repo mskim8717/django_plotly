@@ -19,15 +19,16 @@ def index(request):
     fig = go.Figure()
 
     # Add traces
-    fig.add_trace(go.Scatter(x=random_x, y=random_y0,
-                             mode='markers',
-                             name='markers'))
-    fig.add_trace(go.Scatter(x=random_x, y=random_y1,
-                             mode='lines+markers',
-                             name='lines+markers'))
+    # fig.add_trace(go.Scatter(x=random_x, y=random_y0,
+    #                          mode='markers',
+    #                          name='markers'))
+    # fig.add_trace(go.Scatter(x=random_x, y=random_y1,
+    #                          mode='lines+markers',
+    #                          name='lines+markers'))
     fig.add_trace(go.Scatter(x=random_x, y=random_y2,
                              mode='lines',
-                             name='lines'))
+                             name='lines',
+                             fill='tozeroy'))
 
     # Setting layout of the figure.
     fig.update_layout(title='Styled Scatter',
